@@ -151,8 +151,8 @@ class NestedModelAdmin(admin.ModelAdmin):
         model = self.model
         opts = model._meta
 
-        if not self.has_add_permission(request, obj):
-            raise PermissionDenied
+        # if not self.has_add_permission(request, obj):
+        #     raise PermissionDenied
 
         ModelForm = self.get_form(request)
         formsets = []
